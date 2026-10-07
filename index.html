@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoLab | The automated wet lab to verify protein designs</title>
+<meta name="description" content="Send protein designs and get binding, expression and stability data back from one automated workflow. Concept site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"><path d="M5 5c6 0 8 4 7 7s-1 7 7 7"/><path d="M5 19c6 0 8-4 7-7s-1-7 7-7"/></svg>
+      AutoLab
+    </a>
+    <div class="links">
+      <a href="index.html">Home</a><a href="case-study.html">Case study</a>
+    </div>
+    <div class="cta">
+      <a class="btn dark" href="https://calendar.notion.so/meet/tusharbohra/fsco319i" target="_blank" rel="noopener">Book a meeting</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <a class="pill" href="#order"><b>New</b> Apply for early access <span>→</span></a>
+    <h1>The automated wet lab to verify protein designs</h1>
+    <p class="sub">Send your sequences and get binding, expression and stability data back, from one automated workflow.</p>
+    <div class="cta">
+      <a class="btn dark" href="https://calendar.notion.so/meet/tusharbohra/fsco319i" target="_blank" rel="noopener">Book a meeting</a>
+    </div>
+    <div class="stage">
+      <svg class="iso" id="iso" viewBox="0 0 1400 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+      <div class="dash" role="img" aria-label="Example dashboard showing binding affinity for 96 protein binder designs">
+        <aside class="side">
+          <div class="brand">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M5 5c6 0 8 4 7 7s-1 7 7 7"/><path d="M5 19c6 0 8-4 7-7s-1-7 7-7"/></svg>
+            AutoLab Console
+          </div>
+          <ul>
+            <li>Home</li><li>Notifications</li>
+          </ul>
+          <a class="new">New experiment</a>
+          <ul>
+            <li><span class="dot o"></span>Upcoming</li>
+            <li><span class="dot"></span>In progress</li>
+            <li><span class="dot g"></span>Completed</li>
+          </ul>
+        </aside>
+        <div class="main">
+          <div class="top"><span>PD-L1 binders (Round 1)<span class="tag">● Completed</span></span><span class="btn" style="padding:5px 12px;font-size:12px">Download data</span></div>
+          <div class="meta">
+            <div>Designs<strong>96</strong></div>
+            <div>Target<strong>Human PD-L1</strong></div>
+            <div>Replicates<strong>3</strong></div>
+          </div>
+          <div class="chart">
+            <h4>Binding affinity · 96 / 96 sequences characterized</h4>
+            <div class="bars" id="bars"></div>
+          </div>
+        </div>
+        <div class="tip">
+          <b>binder_017</b>
+          <div><span>Binding affinity</span><span>18 nM</span></div>
+          <div><span>Binding strength</span><span>Strong</span></div>
+          <div><span>Expression</span><span>High</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <p>Built for teams working on</p>
+    <div class="chips"><span>Binder design</span><span>Enzyme engineering</span><span>Antibodies &amp; nanobodies</span><span>Academic labs</span><span>AI protein design</span></div>
+  </div>
+</div>
+
+<section class="tight" id="platform">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Platform</div><h2>One automated line, from sequence to data</h2></div>
+      <p class="lead">Every design follows the same fixed path, so results from different batches and different weeks are directly comparable.</p>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 1100 250" role="img" aria-label="Five-stage workflow: sequence intake, DNA assembly, cell-free expression, assay plates, readout and data">
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1 L9 5 L0 9z" fill="#36b7f6"/></marker></defs>
+        <g stroke="#36b7f6" stroke-width="1.6" fill="none">
+          <path d="M196 105H236" marker-end="url(#ar)"/><path d="M416 105H456" marker-end="url(#ar)"/><path d="M636 105H676" marker-end="url(#ar)"/><path d="M856 105H896" marker-end="url(#ar)"/>
+        </g>
+        <g>
+          <rect x="20" y="40" width="176" height="130" rx="14" fill="var(--tint)" stroke="var(--line)"/>
+          <rect x="240" y="40" width="176" height="130" rx="14" fill="var(--tint)" stroke="var(--line)"/>
+          <rect x="460" y="40" width="176" height="130" rx="14" fill="var(--tint)" stroke="var(--line)"/>
+          <rect x="680" y="40" width="176" height="130" rx="14" fill="var(--tint)" stroke="var(--line)"/>
+          <rect x="900" y="40" width="176" height="130" rx="14" fill="var(--tint)" stroke="var(--line)"/>
+        </g>
+        <!-- 1 sequence -->
+        <g font-family="Geist Mono,monospace" font-size="11" fill="var(--ink-70)"><text x="40" y="78">MKTAYIAKQR</text><text x="40" y="96">QISFVKSHFS</text><text x="40" y="114">RQLEERLGLI</text><text x="40" y="132">EVQAPILSRV</text></g>
+        <!-- 2 DNA -->
+        <g stroke-width="2" fill="none" stroke-linecap="round"><path d="M270 70c20 0 20 30 40 30s20-30 40-30 20 30 40 30" stroke="#36b7f6"/><path d="M270 100c20 0 20-30 40-30s20 30 40 30 20-30 40-30" stroke="#2f7fc4"/></g>
+        <g stroke="#9fcdf0" stroke-width="1.4"><path d="M290 76v18M310 70v30M330 76v18M350 70v30M370 76v18M390 70v30"/></g>
+        <text class="svg-m" x="270" y="140">gene fragments</text><text class="svg-m" x="270" y="154">assembled + verified</text>
+        <!-- 3 cell-free -->
+        <rect x="492" y="62" width="112" height="76" rx="10" fill="var(--bg)" stroke="#36b7f6" stroke-width="1.4"/>
+        <g fill="#36b7f6"><circle cx="520" cy="90" r="6"/><circle cx="548" cy="82" r="4"/><circle cx="574" cy="94" r="5"/><circle cx="534" cy="116" r="4"/><circle cx="562" cy="118" r="6"/></g>
+        <g fill="#2f7fc4"><circle cx="586" cy="76" r="3"/><circle cx="508" cy="112" r="3"/></g>
+        <!-- 4 plate -->
+        <g id="miniPlate"></g>
+        <!-- 5 data -->
+        <g fill="none" stroke="#2f7fc4" stroke-width="2"><path d="M926 150V76"/><path d="M926 150H1052"/><path d="M936 130c20-8 28-44 52-48s40 20 56 14" stroke="#36b7f6"/></g>
+        <g class="svg-t" text-anchor="middle">
+          <text x="108" y="206">1 · Sequence in</text><text x="328" y="206">2 · DNA assembly</text><text x="548" y="206">3 · Cell-free expression</text><text x="768" y="206">4 · Assay plates</text><text x="988" y="206">5 · Readout &amp; data</text>
+        </g>
+        <g class="svg-s" text-anchor="middle">
+          <text x="108" y="224">FASTA / CSV upload</text><text x="328" y="224">synthesized, sequence-checked</text><text x="548" y="224">DNA to protein in hours</text><text x="768" y="224">replicates + controls</text><text x="988" y="224">analyzed, labeled, exported</text>
+        </g>
+      </svg>
+      <figcaption>Simplified process diagram. Stage details are the intended design of the platform.</figcaption>
+    </figure>
+    <div class="spec">
+      <div><strong>96-well</strong>plate format, up to 384 designs per request</div>
+      <div><strong>n = 3</strong>replicates on every measured design</div>
+      <div><strong>2 controls</strong>positive and negative on every plate</div>
+      <div><strong>FASTA · CSV</strong>sequence upload, JSON and CSV results</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Assays</div><h2>Three measurements that decide whether a design is worth keeping</h2></div>
+      <p class="lead">Each assay is a fixed protocol. You choose which to run per batch, and every result carries its raw data.</p>
+    </div>
+    <div class="assays">
+      <div class="assay">
+        <span class="tag2">Binding</span>
+        <h3>Binding kinetics and affinity</h3>
+        <p>Label-free biosensor measurements (bio-layer interferometry or surface plasmon resonance). The target is immobilized, your protein flows over it, and the instrument records how fast it attaches and how fast it lets go.</p>
+        <div class="viz"><svg viewBox="0 0 300 130" id="sensor"></svg></div>
+        <dl><dt>Reports</dt><dd>K<sub>D</sub>, k<sub>on</sub>, k<sub>off</sub></dd><dt>Format</dt><dd>concentration series, 3 replicates</dd><dt>Relation</dt><dd>K<sub>D</sub> = k<sub>off</sub> / k<sub>on</sub></dd></dl>
+      </div>
+      <div class="assay">
+        <span class="tag2">Expression</span>
+        <h3>Expression yield and quality</h3>
+        <p>Each design is produced in a cell-free reaction and quantified. A design that cannot be made, or comes out at the wrong size, is the most common reason a binder fails, so we report it instead of hiding it.</p>
+        <div class="viz"><svg viewBox="0 0 300 130" id="yield"></svg></div>
+        <dl><dt>Reports</dt><dd>yield (µg/mL), size check</dd><dt>Flags</dt><dd>no expression, truncation, low yield</dd><dt>Use</dt><dd>filters designs before deeper work</dd></dl>
+      </div>
+      <div class="assay">
+        <span class="tag2">Thermostability</span>
+        <h3>Melting temperature</h3>
+        <p>Temperature is ramped while a fluorescence signal tracks unfolding (differential scanning fluorimetry). The midpoint of the transition is the melting temperature, T<sub>m</sub>. Higher means the fold holds up under heat and storage.</p>
+        <div class="viz"><svg viewBox="0 0 300 130" id="melt"></svg></div>
+        <dl><dt>Reports</dt><dd>T<sub>m</sub>, onset, curve shape</dd><dt>Range</dt><dd>25 to 95 °C ramp</dd><dt>Use</dt><dd>ranks developability</dd></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="cellfree">
+  <div class="wrap cols2">
+    <div>
+      <div class="eyebrow">Cell-free expression</div>
+      <h2>Proteins made without growing cells</h2>
+      <p class="lead">A cell-free reaction contains only the machinery needed to read DNA and build a protein: ribosomes, enzymes, amino acids and an energy source. Add your DNA and protein appears in hours, with no culture step.</p>
+      <ul class="pts">
+        <li>Hours instead of days, since nothing has to grow or be harvested</li>
+        <li>Small volumes in plates, so thousands of designs fit one run</li>
+        <li>Tolerates proteins that would be toxic to a living host</li>
+        <li>Known limits: complex glycosylation is not reproduced, and some disulfide-rich proteins need adjusted conditions</li>
+      </ul>
+    </div>
+    <figure class="fig" style="margin-top:0">
+      <svg viewBox="0 0 520 330" role="img" aria-label="Cell-free expression: DNA is transcribed to mRNA, a ribosome translates it into a chain, which folds into a protein">
+        <text class="svg-t" x="20" y="28">1 · DNA template</text>
+        <g fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 52c14 0 14 22 28 22s14-22 28-22 14 22 28 22 14-22 28-22 14 22 28 22 14-22 28-22" stroke="#36b7f6"/><path d="M20 74c14 0 14-22 28-22s14 22 28 22 14-22 28-22 14 22 28 22 14-22 28-22 14 22 28 22" stroke="#2f7fc4"/></g>
+        <path d="M250 96v26" stroke="#36b7f6" stroke-width="1.6" marker-end="url(#ar2)"/>
+        <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1 L9 5 L0 9z" fill="#36b7f6"/></marker></defs>
+        <text class="svg-s" x="262" y="114">RNA polymerase transcribes</text>
+        <text class="svg-t" x="20" y="146">2 · mRNA</text>
+        <path d="M20 168h330" stroke="#2f7fc4" stroke-width="3" stroke-linecap="round"/>
+        <g font-family="Geist Mono,monospace" font-size="9" fill="var(--ink-50)"><text x="30" y="188">AUG</text><text x="80" y="188">GCU</text><text x="130" y="188">AAA</text><text x="180" y="188">UAC</text><text x="230" y="188">GGC</text></g>
+        <ellipse cx="170" cy="162" rx="46" ry="22" fill="#36b7f6" fill-opacity=".25" stroke="#36b7f6"/>
+        <ellipse cx="170" cy="140" rx="32" ry="14" fill="#2f7fc4" fill-opacity=".3" stroke="#2f7fc4"/>
+        <text class="svg-s" x="226" y="150">ribosome translates</text>
+        <path d="M250 214v22" stroke="#36b7f6" stroke-width="1.6" marker-end="url(#ar2)"/>
+        <text class="svg-t" x="20" y="262">3 · Chain folds into protein</text>
+        <g fill="#36b7f6"><circle cx="40" cy="296" r="7"/><circle cx="62" cy="288" r="7"/><circle cx="84" cy="298" r="7"/><circle cx="106" cy="290" r="7"/><circle cx="128" cy="300" r="7"/></g>
+        <path d="M230 300c-18-34 20-52 44-36s60 8 54 26-34 28-60 22-30-6-38-12z" fill="#36b7f6" fill-opacity=".3" stroke="#2f7fc4" stroke-width="2"/>
+        <path d="M262 288c10-12 28-6 30 4" fill="none" stroke="#2f7fc4" stroke-width="2"/>
+      </svg>
+      <figcaption>Schematic only. Not to scale.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="alt" id="plates">
+  <div class="wrap cols2">
+    <figure class="fig" style="margin-top:0">
+      <svg viewBox="0 0 520 330" id="plate" role="img" aria-label="96-well plate layout showing blanks, controls and triplicate sample wells"></svg>
+      <figcaption>Example plate map. Every plate carries its own blanks and controls, so each measurement is normalized in place.</figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow">Plate design</div>
+      <h2>Controls on every plate, replicates on every design</h2>
+      <p class="lead">Numbers from different plates are only comparable if the plates carry their own references. Ours do.</p>
+      <ul class="pts">
+        <li>Blanks to set the baseline signal of the buffer alone</li>
+        <li>A positive control with a known binder, to confirm the assay is working that day</li>
+        <li>A negative control that should not bind, to measure background</li>
+        <li>Each design in triplicate, with spread reported next to the average</li>
+        <li>Plate-level QC flags a run before its data is delivered</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="console">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Console</div><h2>See every experiment as it moves</h2></div>
+      <p class="lead">Track queued and running batches, open raw curves for any design, and compare rounds side by side.</p>
+    </div>
+    <div class="minis">
+      <div class="mini">
+        <h4>Experiments <span>5 active</span></h4>
+        <div class="job"><b>PD-L1 binders · R2</b><span class="chipx a">Complete</span><div class="prog"><i style="width:100%"></i></div><small>96 designs · delivered</small></div>
+        <div class="job"><b>Lysozyme variants · R1</b><span class="chipx b">Measuring</span><div class="prog"><i style="width:68%"></i></div><small>192 designs · binding + Tm</small></div>
+        <div class="job"><b>Nanobody panel · R3</b><span class="chipx b">Expressing</span><div class="prog"><i style="width:34%"></i></div><small>48 designs · expression</small></div>
+        <div class="job"><b>Enzyme set · R1</b><span class="chipx c">Queued</span><div class="prog"><i style="width:8%"></i></div><small>384 designs · all assays</small></div>
+      </div>
+      <div class="mini">
+        <h4>Sensorgram <span>binder_017 · 3 reps</span></h4>
+        <svg viewBox="0 0 300 190" id="sensor2"></svg>
+      </div>
+      <div class="mini">
+        <h4>Round comparison <span>R1 vs R2</span></h4>
+        <svg viewBox="0 0 300 190" id="scatter"></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Results</div><h2>A ranked table with raw data behind every row</h2></div>
+      <p class="lead">Sample output with simulated values, to show the structure of what you receive.</p>
+    </div>
+    <table class="cmp" style="margin-top:28px">
+      <thead><tr><th>Design</th><th>Length</th><th>Yield</th><th>K<sub>D</sub></th><th>k<sub>on</sub> (1/Ms)</th><th>k<sub>off</sub> (1/s)</th><th>T<sub>m</sub></th><th>Rank</th></tr></thead>
+      <tbody>
+        <tr><td>binder_017</td><td>112 aa</td><td>38 µg/mL</td><td>18 nM</td><td>2.1e5</td><td>3.8e-3</td><td>67 °C</td><td>1</td></tr>
+        <tr><td>binder_052</td><td>98 aa</td><td>41 µg/mL</td><td>41 nM</td><td>1.4e5</td><td>5.7e-3</td><td>61 °C</td><td>2</td></tr>
+        <tr><td>binder_008</td><td>124 aa</td><td>19 µg/mL</td><td>130 nM</td><td>8.0e4</td><td>1.0e-2</td><td>58 °C</td><td>3</td></tr>
+        <tr><td>binder_071</td><td>105 aa</td><td>44 µg/mL</td><td>&gt;1 µM</td><td>n/a</td><td>n/a</td><td>72 °C</td><td>n/a</td></tr>
+        <tr><td>binder_033</td><td>131 aa</td><td>not detected</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>flagged</td></tr>
+      </tbody>
+    </table>
+    <p class="figcap">Values are simulated for illustration. Designs that fail to express are flagged, not dropped.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>From sequence to data in one request</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Submit</h3><p>Upload sequences and pick a target and assay in the console or via API.</p></div>
+      <div class="step"><div class="n">02</div><h3>Express</h3><p>We make your proteins in the same facility that tests them, with no handoffs between vendors.</p></div>
+      <div class="step"><div class="n">03</div><h3>Measure</h3><p>Automated assays run with replicates and controls on every design.</p></div>
+      <div class="step"><div class="n">04</div><h3>Iterate</h3><p>Clean, labeled data returns to you, ready to feed the next design round.</p></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn" href="case-study.html">See a worked example →</a></p>
+  </div>
+</section>
+
+<section class="alt" id="api">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">API</div><h2>Built for design pipelines, not just people</h2></div>
+      <p class="lead">Submit from a notebook, poll or subscribe to status, and pull structured results straight into your models.</p>
+    </div>
+    <div class="api3">
+      <div><h4>1 · Submit</h4>
+<pre><span class="c"># illustrative, not a live API</span>
+<span class="k">POST</span> /v1/experiments
+{
+  <span class="s">"assays"</span>: [<span class="s">"binding"</span>,<span class="s">"expression"</span>,<span class="s">"tm"</span>],
+  <span class="s">"target"</span>: <span class="s">"human_pd_l1"</span>,
+  <span class="s">"replicates"</span>: 3,
+  <span class="s">"sequences"</span>: [
+    {<span class="s">"id"</span>:<span class="s">"b017"</span>,<span class="s">"seq"</span>:<span class="s">"MKTAY..."</span>},
+    {<span class="s">"id"</span>:<span class="s">"b052"</span>,<span class="s">"seq"</span>:<span class="s">"MSDKI..."</span>}
+  ]
+}</pre></div>
+      <div><h4>2 · Track</h4>
+<pre><span class="k">GET</span> /v1/experiments/exp_8f2a
+{
+  <span class="s">"status"</span>: <span class="s">"measuring"</span>,
+  <span class="s">"stage"</span>: <span class="s">"binding"</span>,
+  <span class="s">"progress"</span>: 0.68,
+  <span class="s">"flags"</span>: [
+    {<span class="s">"id"</span>:<span class="s">"b033"</span>,
+     <span class="s">"issue"</span>:<span class="s">"no_expression"</span>}
+  ]
+}</pre></div>
+      <div><h4>3 · Results</h4>
+<pre><span class="k">GET</span> /v1/experiments/exp_8f2a/results
+{
+  <span class="s">"id"</span>: <span class="s">"b017"</span>,
+  <span class="s">"kd_nM"</span>: 18,
+  <span class="s">"kon"</span>: 2.1e5,
+  <span class="s">"koff"</span>: 3.8e-3,
+  <span class="s">"tm_C"</span>: 67,
+  <span class="s">"yield_ug_ml"</span>: 38,
+  <span class="s">"curves_url"</span>: <span class="s">"…/raw"</span>
+}</pre></div>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Comparison</div><h2>How this compares with the usual routes</h2></div>
+      <p class="lead">Typical ranges for the common alternatives against our targets. Ours are goals, not measured results.</p>
+    </div>
+    <table class="cmp">
+      <thead><tr><th></th><th>Build it in-house</th><th>Several vendors</th><th class="us">AutoLab (target)</th></tr></thead>
+      <tbody>
+        <tr><td>Time per batch</td><td>Weeks, plus setup</td><td>Weeks, mostly waiting between steps</td><td class="us">About a week</td></tr>
+        <tr><td>Handoffs</td><td>None, but you do all of it</td><td>Synthesis, expression and assay each ship separately</td><td class="us">One request, one facility</td></tr>
+        <tr><td>Upfront equipment</td><td>High: instruments, staff, validation</td><td>None</td><td class="us">None</td></tr>
+        <tr><td>Comparability between batches</td><td>Depends on who ran it</td><td>Differs by vendor</td><td class="us">Fixed protocols and on-plate controls</td></tr>
+        <tr><td>Failed designs</td><td>Often lost in notes</td><td>Often not reported</td><td class="us">Flagged and returned as data</td></tr>
+        <tr><td>Data format</td><td>Spreadsheets, instrument exports</td><td>PDF reports</td><td class="us">JSON and CSV, with raw curves</td></tr>
+        <tr><td>Iteration speed</td><td>A few rounds per quarter</td><td>One or two per quarter</td><td class="us">Many rounds per quarter</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="final" id="order">
+  <div class="wrap">
+    <h2>Ready to test your designs?</h2>
+    <p class="lead" style="margin:0 auto">Tell us what you're building and we'll scope a pilot batch.</p>
+    <div class="cta">
+      <a class="btn dark" href="https://calendar.notion.so/meet/tusharbohra/fsco319i" target="_blank" rel="noopener">Book a meeting</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 AutoLab Inc. · A Delaware C corporation</span></div>
+</footer>
+
+
+<script>
+// deterministic pseudo-random so the chart looks the same every load
+let seed=7;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const bars=document.getElementById('bars');
+for(let i=0;i<48;i++){
+  const v=i<3?95-i*14:Math.max(14,60-rnd()*34+(i%7===0?18:0));
+  const b=document.createElement('i');b.style.height=v+'%';
+  if(i===2)b.className='hi';bars.appendChild(b);
+}
+// isometric block field behind the dashboard
+const svg=document.getElementById('iso');const NS='http://www.w3.org/2000/svg';
+const css=getComputedStyle(document.documentElement);
+function box(cx,cy,w,h,d){
+  const g=document.createElementNS(NS,'g');
+  const p=(pts,f,o)=>{const e=document.createElementNS(NS,'polygon');e.setAttribute('points',pts);e.setAttribute('fill',f);e.setAttribute('fill-opacity',o);e.setAttribute('stroke','#36b7f6');e.setAttribute('stroke-opacity','.45');e.setAttribute('stroke-width','1');g.appendChild(e)};
+  p(`${cx},${cy} ${cx+w},${cy+w/2} ${cx},${cy+w} ${cx-w},${cy+w/2}`,'#cfe6f8',.55);
+  p(`${cx-w},${cy+w/2} ${cx},${cy+w} ${cx},${cy+w+h} ${cx-w},${cy+w/2+h}`,'#9fcdf0',.35);
+  p(`${cx},${cy+w} ${cx+w},${cy+w/2} ${cx+w},${cy+w/2+h} ${cx},${cy+w+h}`,'#b9dbf4',.3);
+  svg.appendChild(g);
+}
+for(let r=0;r<7;r++)for(let c=0;c<13;c++){
+  if(rnd()<.25)continue;
+  const x=140+c*95+(r%2)*47,y=40+r*40;
+  box(x,y,38,10+rnd()*34,0);
+}
+
+// ---- science charts (simulated curves) ----
+(function(){
+const N='http://www.w3.org/2000/svg';
+const el=(t,at,p)=>{const e=document.createElementNS(N,t);for(const k in at)e.setAttribute(k,at[k]);if(p)p.appendChild(e);return e};
+const get=id=>document.getElementById(id);
+const BLUE='#36b7f6',DEEP='#2f7fc4',LINE='rgba(120,140,155,.35)';
+function axes(svg,w,h,l,b,xl,yl){
+  el('path',{d:`M${l} 8V${h-b}H${w-8}`,stroke:LINE,fill:'none'},svg);
+  if(xl){const t=el('text',{x:w-8,y:h-4,'text-anchor':'end',class:'svg-m'},svg);t.textContent=xl}
+  if(yl){const t=el('text',{x:l+4,y:14,class:'svg-m'},svg);t.textContent=yl}
+}
+// sensorgram: association 0..60, dissociation 60..120
+function sens(svg,w,h,concs,cols){
+  const l=24,b=18,pw=w-l-10,ph=h-b-24;
+  axes(svg,w,h,l,b,'time (s)','response (nm)');
+  concs.forEach((c,i)=>{
+    const kon=0.045,koff=0.012,rmax=1;
+    const kobs=kon*c+koff,req=kon*c/kobs;
+    let d='';
+    for(let t=0;t<=120;t+=2){
+      let r=t<=60?req*rmax*(1-Math.exp(-kobs*t)):req*rmax*(1-Math.exp(-kobs*60))*Math.exp(-koff*(t-60));
+      const x=l+t/120*pw,y=(h-b)-r*ph*1.05;
+      d+=(t?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);
+    }
+    el('path',{d,fill:'none',stroke:cols[i],'stroke-width':1.8},svg);
+  });
+  el('path',{d:`M${l+pw/2} 10V${h-b}`,stroke:LINE,'stroke-dasharray':'3 3'},svg);
+}
+const cols=['#bfe3fa','#7cc7f3','#36b7f6','#2f7fc4','#245f93'];
+if(get('sensor'))sens(get('sensor'),300,130,[2,5,12,30,75],cols);
+if(get('sensor2'))sens(get('sensor2'),300,190,[2,5,12,30,75],cols);
+// yield bars
+(function(){
+  const s=get('yield');if(!s)return;
+  axes(s,300,130,24,18,'design','µg/mL');
+  const v=[38,41,19,44,0,27,33,8,36,22];
+  v.forEach((y,i)=>{
+    const x=34+i*26,h=y/46*88;
+    el('rect',{x,y:112-h,width:18,height:Math.max(h,2),rx:2,fill:y===0?'#c9d3da':(y<12?'#f0a23b':BLUE)},s);
+  });
+  const t=el('text',{x:34+4*26-2,y:106,class:'svg-m'},s);t.textContent='×';
+})();
+// melt curves
+(function(){
+  const s=get('melt');if(!s)return;
+  axes(s,300,130,24,18,'temp (°C)','signal');
+  [[58,'#f0a23b'],[61,BLUE],[67,DEEP]].forEach(([tm,c])=>{
+    let d='';
+    for(let T=25;T<=95;T+=1){
+      const f=1/(1+Math.exp(-(T-tm)/2.2));
+      const x=24+(T-25)/70*266,y=112-f*86-6*(T>tm+12?(T-tm-12)/20:0);
+      d+=(T>25?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);
+    }
+    el('path',{d,fill:'none',stroke:c,'stroke-width':1.8},s);
+    const x=24+(tm-25)/70*266;
+    el('path',{d:`M${x} 112V26`,stroke:c,'stroke-dasharray':'2 3',opacity:.6},s);
+    const t=el('text',{x:x+3,y:24+[0,10,20][[58,61,67].indexOf(tm)]*0+[22,12,22][[58,61,67].indexOf(tm)]-12,class:'svg-m'},s);t.textContent=tm+'°';
+  });
+})();
+// scatter R1 vs R2 (affinity vs yield)
+(function(){
+  const s=get('scatter');if(!s)return;
+  axes(s,300,190,30,18,'yield','−log KD');
+  let seed=5;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+  for(let i=0;i<60;i++){el('circle',{cx:40+r()*220,cy:28+r()*118+ (r()*30),r:3.2,fill:'#9fcdf0',opacity:.8},s)}
+  for(let i=0;i<60;i++){const x=70+r()*190;el('circle',{cx:x,cy:30+(1-x/280)*40+r()*90,r:3.2,fill:DEEP,opacity:.85},s)}
+  el('circle',{cx:200,cy:178,r:3,fill:'#9fcdf0'},s);el('circle',{cx:240,cy:178,r:3,fill:DEEP},s);
+  const a=el('text',{x:208,y:181,class:'svg-m'},s);a.textContent='R1';
+  const b=el('text',{x:248,y:181,class:'svg-m'},s);b.textContent='R2';
+})();
+// 96-well plate map
+(function(){
+  const s=get('plate');if(!s)return;
+  const rows='ABCDEFGH',x0=62,y0=44,dx=36,dy=36;
+  for(let c=0;c<12;c++){const t=el('text',{x:x0+c*dx,y:30,'text-anchor':'middle',class:'svg-m'},s);t.textContent=c+1}
+  for(let r=0;r<8;r++){const t=el('text',{x:26,y:y0+r*dy+4,class:'svg-m'},s);t.textContent=rows[r]}
+  el('rect',{x:40,y:18,width:456,height:300,rx:12,fill:'none',stroke:LINE},s);
+  for(let r=0;r<8;r++)for(let c=0;c<12;c++){
+    let f='#dcecfa',st='#9fcdf0';
+    if(c===0&&r<2){f='#e4e9ed';st='#b8c4cc'}           // blanks
+    else if(c===0&&r>=2&&r<5){f=DEEP;st=DEEP}           // positive control
+    else if(c===0&&r>=5){f='#f0a23b';st='#f0a23b'}       // negative control
+    else{const g=Math.floor((c-1)/3);f=['#bfe3fa','#9fd3f5','#7cc7f3','#5ab9ee'][g%4]}
+    el('circle',{cx:x0+c*dx,cy:y0+r*dy,r:12,fill:f,stroke:st,'stroke-width':1},s);
+  }
+  const lg=[['#e4e9ed','blank'],[DEEP,'positive'],['#f0a23b','negative'],['#7cc7f3','design (×3)']];
+  lg.forEach(([c,t],i)=>{el('circle',{cx:62+i*110,cy:332,r:5,fill:c},s);const tx=el('text',{x:72+i*110,y:336,class:'svg-s'},s);tx.textContent=t});
+  s.setAttribute('viewBox','0 0 520 350');
+})();
+// mini plate inside the process diagram
+(function(){
+  const g=get('miniPlate');if(!g)return;
+  for(let r=0;r<5;r++)for(let c=0;c<8;c++){
+    el('circle',{cx:706+c*17,cy:66+r*17,r:5.2,fill:(c===0)?DEEP:(r%2?'#7cc7f3':'#bfe3fa'),stroke:'#9fcdf0','stroke-width':.8},g);
+  }
+})();
+})();
+</script>
+</body>
+</html>
